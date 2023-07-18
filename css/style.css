@@ -329,15 +329,40 @@ img{
 }
 @media(max-width:800px){
     .home{
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
         align-items: center;
-        justify-content: center;
+        gap: 2rem;
+        padding: 100px 50px;
+        height: 100vh;
+    }
+    
+    .left-section{
+        width: 100%;
+        margin-left: 20px;
+       
+    }
+    
+    .left-section h1{
+        font-weight: 700;
+        font-size: 26px;
+    }
+    
+    .left-section,
+    .about-introduction span{
+        color: black;
+    }
+    
+    .grad-pic{
+        width: 75%;
+        border-radius: 50%;
+        margin-left: 33px;
     }
     .about-container{
         display: flex;
         flex-direction: column;
         row-gap: 50px;
+        margin-top: 50px;
     }
     
     .image-container{
@@ -357,7 +382,7 @@ img{
     
     .about-introduction p{
         font-size: 16px;
-        line-height: 30px;    
+        line-height: 24px;    
     }
     .icons{
         display: flex;
@@ -439,22 +464,47 @@ img{
         font-weight: 800;
         font-size: 20px;
     }
-
+    .footer{
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px -2px 18px 0 rgb(129 162 182 / 20%);
+        padding: 10px 8%;
+        position: relative;
+        z-index: 1000;
+        font-weight: 800;
+        height: 20px;
+    }
+    .footer-name{
+        font-size: 8px;
+    }
+    .copyright{
+        flex: 1;
+        font-size: 8px;
+        font-weight: 600;
+    }
 }
 @media(max-width:900px){
     .project-section{
         display: grid;
         grid-template-columns: 1fr;
-        justify-content: center;
-        align-items: center;
-        column-gap: 20px;
-        margin: 5px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .project-preview{
+        margin-top: 80px;
+        margin-bottom: 0;
     }
     .project-video{
         width: 100%;
     }
     .project-details{
         font-size: 16px;
+        margin-bottom: 20px;
     }
     label.logo{
         font-size: 30px;
